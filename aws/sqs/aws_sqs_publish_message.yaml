@@ -1,5 +1,6 @@
 version: 3
 type: conversation
+name: "AWS SQS publish message"
 steps:
   - id: get_sqs_queues
     type: action

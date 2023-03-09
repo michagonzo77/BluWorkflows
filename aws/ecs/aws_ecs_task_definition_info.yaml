@@ -1,5 +1,6 @@
 version: 3
 type: conversation
+name: "AWS ECS task definition info"
 steps:
   - id: get_task_definitions
     type: action

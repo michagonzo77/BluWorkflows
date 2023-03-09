@@ -1,5 +1,6 @@
 version: 3
 type: conversation
+name: "AWS ECS scale service"
 steps:
   - id: get_ecs_clusters
     type: action

@@ -1,5 +1,6 @@
 version: 3
 type: conversation
+name: "upgrade AWS EKS cluster version"
 steps:
   - id: get_eks_clusters
     type: action
