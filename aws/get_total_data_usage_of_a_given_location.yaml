@@ -8,7 +8,7 @@ steps:
     action:
       store: "aws"
       name: "s3.ListBuckets"
-      runner: "runner02"
+      runner: "blumedia"
       parameters: {}
   - id: "s3_buckets"
     type: "jq"
@@ -23,7 +23,7 @@ steps:
     action:
       store: "aws"
       name: "s3.GetBucketLocation"
-      runner: "runner02"
+      runner: "blumedia"
       parameters:
         Bucket: "${s3_bucket}"
   - id: "s3_bucket_data_usage"
