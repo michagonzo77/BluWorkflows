@@ -20,6 +20,7 @@ steps:
   - id: get_ecs_services
     type: action
     action:
+      runner: "blumedia"
       store: aws
       name: ecs.ListServices
       parameters:

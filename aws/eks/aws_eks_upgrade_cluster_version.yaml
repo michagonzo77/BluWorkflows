@@ -40,6 +40,7 @@ steps:
   - id: get_eks_cluster_versions
     type: action
     action:
+      runner: "bluemedia"
       store: aws
       name: "eks.ListUpdates"
       parameters:
