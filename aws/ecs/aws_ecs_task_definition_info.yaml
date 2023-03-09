@@ -5,7 +5,7 @@ steps:
   - id: get_task_definitions
     type: action
     action:
-      runner: "blumedia
+      runner: "blumedia"
       store: aws
       name: "ecs.ListTaskDefinitions"
       parameters: {}
