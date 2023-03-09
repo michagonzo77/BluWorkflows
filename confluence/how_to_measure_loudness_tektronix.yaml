@@ -1,0 +1,9 @@
+version: 3
+type: conversation
+name: "How to measure audio loudness with the Tektronix scope"
+steps:
+  - id: show_link
+    type: message
+    prompt: "*Confluence:*\n https://bluteam.atlassian.net/wiki/spaces/QC/pages/713162950/Audio+Measurement+Tektronix+WVR+8200"
+  - id: exit
+    type: exit

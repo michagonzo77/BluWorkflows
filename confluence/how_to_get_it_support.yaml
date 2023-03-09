@@ -1,0 +1,9 @@
+version: 3
+type: conversation
+name: "How to get IT support"
+steps:
+  - id: show_link
+    type: message
+    prompt: "*Confluence:*\n https://bluteam.atlassian.net/servicedesk/customer/portal/1"
+  - id: exit
+    type: exit

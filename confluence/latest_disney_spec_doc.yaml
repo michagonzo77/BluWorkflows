@@ -1,0 +1,9 @@
+version: 3
+type: conversation
+name: "Give me the latest Disney+ specification document"
+steps:
+  - id: show_link
+    type: message
+    prompt: "*Confluence:*\n https://drive.google.com/file/d/1g71CHquw04r9kFNktZSpRrtNtnv-mqXa/view?usp=share_link"
+  - id: exit
+    type: exit

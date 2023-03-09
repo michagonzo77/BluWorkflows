@@ -1,0 +1,34 @@
+author: "kubiyamg@gmail.com"
+version: 3
+type: "conversation"
+name: "get total data usage of a given location"
+steps:
+  - id: "get_s3_buckets"
+    type: "action"
+    action:
+      store: "aws"
+      name: "s3.ListBuckets"
+      runner: "runner02"
+      parameters: {}
+  - id: "s3_buckets"
+    type: "jq"
+    jq: ".get_s3_buckets.Buckets[].Name"
+  - id: "s3_bucket"
+    type: "input"
+    value_type: "enum"
+    prompt: "Select the S3 bucket you want to see data usage for"
+    possible_values: "${s3_buckets}"
+  - id: "get_s3_bucket_data_usage"
+    type: "action"
+    action:
+      store: "aws"
+      name: "s3.GetBucketLocation"
+      runner: "runner02"
+      parameters:
+        Bucket: "${s3_bucket}"
+  - id: "s3_bucket_data_usage"
+    type: "jq"
+    jq: ".get_s3_bucket_data_usage.LocationConstraint"
+  - id: "success"
+    type: "message"
+    prompt: "✅ *Done!*\nS3 bucket *${s3_bucket}* data usage is *${s3_bucket_data_usage}*\n"

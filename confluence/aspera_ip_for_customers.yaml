@@ -1,0 +1,9 @@
+version: 3
+type: conversation
+name: "What are the Aspera IP's for customers"
+steps:
+  - id: show_link
+    type: message
+    prompt: "*Confluence:*\n https://bluteam.atlassian.net/wiki/spaces/IT/pages/811892848/Aspera"
+  - id: exit
+    type: exit

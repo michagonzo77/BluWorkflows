@@ -1,0 +1,9 @@
+version: 3
+type: conversation
+name: "Tell me all of our Telestream vantage workflows"
+steps:
+  - id: show_link
+    type: message
+    prompt: "*Confluence:*\n https://bluteam.atlassian.net/wiki/spaces/CP/pages/51150870/Telestream+Vantage"
+  - id: exit
+    type: exit

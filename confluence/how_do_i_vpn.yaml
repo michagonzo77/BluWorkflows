@@ -1,0 +1,9 @@
+version: 3
+type: conversation
+name: "How do I VPN"
+steps:
+  - id: show_link
+    type: message
+    prompt: "*Confluence:*\n https://bluteam.atlassian.net/wiki/spaces/IT/pages/634454019/BLU+SSL+VPN"
+  - id: exit
+    type: exit
